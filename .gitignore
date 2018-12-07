@@ -1,0 +1,8 @@
+*.egg-info
+*.mypy_cache
+*.pyc
+*.sqlite3
+.idea
+.env
+static_all
+ve
