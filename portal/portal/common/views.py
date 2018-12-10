@@ -11,6 +11,7 @@ from rest_framework.status import (
     HTTP_401_UNAUTHORIZED
 )
 
+
 class HomeView(TemplateView):
     template_name = 'index.html'
 

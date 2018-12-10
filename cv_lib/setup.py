@@ -15,6 +15,8 @@ setup(
     url='https://github.com/makvak/live-cv/',
     license='MIT',
     install_requires=[
-        'django==2.1.4',
+        'SQLAlchemy==1.2.14',
+        'SQLAlchemy-Utils==0.33.9',
+        'SQLAlchemy-ImageAttach==1.1.0',
     ]
 )
