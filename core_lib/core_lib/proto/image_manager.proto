@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package image_processor;
+
+service ImageManager {
+    rpc blur (Uuid) returns (stream Image) {}
+    rpc ping (Ping) returns (Pong) {}
+}
+
+message Uuid {
+    string uuid = 1;
+}
+
+message Image {
+    bytes image = 1;
+    bool success = 2;
+    string uuid = 3;
+}
+
+message Ping {
+  string message = 1;
+}
+
+message Pong {
+  string message = 1;
+}

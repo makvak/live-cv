@@ -16,5 +16,7 @@ setup(
     license='MIT',
     install_requires=[
         'django==2.1.4',
+        'grpcio==1.17.0',
+        'grpcio-tools==1.17.0',
     ]
 )
