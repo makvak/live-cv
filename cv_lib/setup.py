@@ -18,5 +18,6 @@ setup(
         'SQLAlchemy==1.2.14',
         'SQLAlchemy-Utils==0.33.9',
         'SQLAlchemy-ImageAttach==1.1.0',
+        'opencv-python-headless==3.4.4.19'
     ]
 )
