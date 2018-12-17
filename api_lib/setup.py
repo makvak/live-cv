@@ -15,5 +15,6 @@ setup(
     url='https://github.com/makvak/live-cv/',
     license='MIT',
     install_requires=[
+        'djangorestframework==3.9.0',
     ]
 )

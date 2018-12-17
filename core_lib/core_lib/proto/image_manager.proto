@@ -13,8 +13,6 @@ message Uuid {
 
 message Image {
     bytes image = 1;
-    bool success = 2;
-    string uuid = 3;
 }
 
 message Ping {

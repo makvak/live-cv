@@ -12,11 +12,11 @@ from sqlalchemy_imageattach.entity import (
 from sqlalchemy_imageattach.stores import fs
 from sqlalchemy_utils.types.uuid import UUIDType
 
-
 from django.conf import settings
 
 from .base import Base
 
+# TODO take data from configs
 store = fs.FileSystemStore(
     path='{}/images/'.format(settings.BASE_DIR),
     base_url='127.0.0.1:8003/images/'

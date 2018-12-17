@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='image_processor',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x13image_manager.proto\x12\x0fimage_processor\"\x14\n\x04Uuid\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"5\n\x05Image\x12\r\n\x05image\x18\x01 \x01(\x0c\x12\x0f\n\x07success\x18\x02 \x01(\x08\x12\x0c\n\x04uuid\x18\x03 \x01(\t\"\x17\n\x04Ping\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x17\n\x04Pong\x12\x0f\n\x07message\x18\x01 \x01(\t2\x81\x01\n\x0cImageManager\x12\x39\n\x04\x62lur\x12\x15.image_processor.Uuid\x1a\x16.image_processor.Image\"\x00\x30\x01\x12\x36\n\x04ping\x12\x15.image_processor.Ping\x1a\x15.image_processor.Pong\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x13image_manager.proto\x12\x0fimage_processor\"\x14\n\x04Uuid\x12\x0c\n\x04uuid\x18\x01 \x01(\t\"\x16\n\x05Image\x12\r\n\x05image\x18\x01 \x01(\x0c\"\x17\n\x04Ping\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x17\n\x04Pong\x12\x0f\n\x07message\x18\x01 \x01(\t2\x81\x01\n\x0cImageManager\x12\x39\n\x04\x62lur\x12\x15.image_processor.Uuid\x1a\x16.image_processor.Image\"\x00\x30\x01\x12\x36\n\x04ping\x12\x15.image_processor.Ping\x1a\x15.image_processor.Pong\"\x00\x62\x06proto3')
 )
 
 
@@ -70,20 +70,6 @@ _IMAGE = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='success', full_name='image_processor.Image.success', index=1,
-      number=2, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
-    _descriptor.FieldDescriptor(
-      name='uuid', full_name='image_processor.Image.uuid', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -97,7 +83,7 @@ _IMAGE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=62,
-  serialized_end=115,
+  serialized_end=84,
 )
 
 
@@ -127,8 +113,8 @@ _PING = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=117,
-  serialized_end=140,
+  serialized_start=86,
+  serialized_end=109,
 )
 
 
@@ -158,8 +144,8 @@ _PONG = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=142,
-  serialized_end=165,
+  serialized_start=111,
+  serialized_end=134,
 )
 
 DESCRIPTOR.message_types_by_name['Uuid'] = _UUID
@@ -204,8 +190,8 @@ _IMAGEMANAGER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=168,
-  serialized_end=297,
+  serialized_start=137,
+  serialized_end=266,
   methods=[
   _descriptor.MethodDescriptor(
     name='blur',

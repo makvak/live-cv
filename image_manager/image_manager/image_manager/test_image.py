@@ -1,6 +1,6 @@
 from sqlalchemy_imageattach.context import store_context
 from cv_lib.models.image import store, Image, ImageContainer
-from cv_lib.models.base import session_factory
+from cv_lib.db_session import session_factory
 
 from cv_lib.image_handler import BlurFilterHandler
 
@@ -17,13 +17,18 @@ def put_image():
 
 
 def perform_blur():
+    from cv_lib.domain.image import blur_image
     session = session_factory()
-    with store_context(store):
-        image_c = session.query(ImageContainer).first()
-        new_i_c = BlurFilterHandler(image_c).execute()
-        session.add(new_i_c)
-        session.commit()
+    uuid = session.query(ImageContainer).first().uuid
     session.close()
+    blur_image(session.query(ImageContainer).first().uuid)
+    # session = session_factory()
+    # with store_context(store):
+    #     image_c = session.query(ImageContainer).first()
+    #     new_i_c = BlurFilterHandler(image_c).execute()
+    #     session.add(new_i_c)
+    #     session.commit()
+    # session.close()
 
 # put_image()
 perform_blur()
